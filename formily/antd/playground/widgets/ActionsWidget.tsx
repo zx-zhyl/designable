@@ -19,10 +19,10 @@ export const ActionsWidget = observer(() => {
   }, [])
   return (
     <Space style={{ marginRight: 10 }}>
-      <Button href="https://designable-fusion.formilyjs.org">
+      {/* <Button href="https://designable-fusion.formilyjs.org">
         Alibaba Fusion
-      </Button>
-      <Radio.Group
+      </Button> */}
+      {/* <Radio.Group
         value={GlobalRegistry.getDesignerLanguage()}
         optionType="button"
         options={[
@@ -33,11 +33,11 @@ export const ActionsWidget = observer(() => {
         onChange={(e) => {
           GlobalRegistry.setDesignerLanguage(e.target.value)
         }}
-      />
-      <Button href="https://github.com/alibaba/designable" target="_blank">
+      /> */}
+      {/* <Button href="https://github.com/alibaba/designable" target="_blank">
         <GithubOutlined />
         Github
-      </Button>
+      </Button> */}
       <Button
         onClick={() => {
           saveSchema(designer)
@@ -45,14 +45,14 @@ export const ActionsWidget = observer(() => {
       >
         <TextWidget>Save</TextWidget>
       </Button>
-      <Button
+      {/* <Button
         type="primary"
         onClick={() => {
           saveSchema(designer)
         }}
       >
         <TextWidget>Publish</TextWidget>
-      </Button>
+      </Button> */}
     </Space>
   )
 })

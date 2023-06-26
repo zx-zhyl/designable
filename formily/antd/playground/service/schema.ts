@@ -13,6 +13,10 @@ export const saveSchema = (designer: Engine) => {
   message.success('Save Success')
 }
 
+export const getSchema = () => {
+  return JSON.parse(localStorage.getItem('formily-schema'))
+}
+
 export const loadInitialSchema = (designer: Engine) => {
   try {
     designer.setCurrentTree(

@@ -53,7 +53,7 @@ import {
   DatePicker,
   TimePicker,
   Upload,
-  Switch,
+  // Switch,
   Text,
   Card,
   ArrayCards,
@@ -65,6 +65,8 @@ import {
   FormLayout,
   FormGrid,
 } from '../src'
+import { HashRouter, Route, Switch } from 'react-router-dom'
+import Preview from './preview'
 
 setNpmCDNRegistry('//unpkg.com')
 
@@ -136,7 +138,7 @@ const App = () => {
                 DatePicker,
                 TimePicker,
                 Upload,
-                Switch,
+                // Switch,
                 ObjectContainer,
               ]}
             />
@@ -230,4 +232,19 @@ const App = () => {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const Main = () => {
+  return (
+    <HashRouter>
+      <Switch>
+        <Route exact path="/">
+          <Preview />
+        </Route>
+        <Route exact path="/design">
+          <App />
+        </Route>
+      </Switch>
+    </HashRouter>
+  )
+}
+
+ReactDOM.render(<Main />, document.getElementById('root'))
